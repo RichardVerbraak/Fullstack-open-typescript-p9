@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ts-node": "ts-node"
+    "ts-node": "ts-node",
+    "multiplier": "ts-node -- multiplier.ts",
+    "calculator": "ts node -- calculator.ts"
   },
   "keywords": [],
   "author": "",
