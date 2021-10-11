@@ -1,9 +1,10 @@
 // The type keyword allows you to make a type 'alias' aka giving your type a name
 // A union type is used when a type has values that can overlap
 type Operation = 'add' | 'multiply' | 'divide'
+type Result = number
 
 // I used a switch case instead of multiple if/else statements here
-const calculator = (a: number, b: number, operation: Operation) => {
+const calculator = (a: number, b: number, operation: Operation) : Result => {
 	switch(operation) {
 		case 'add':
 			return a + b
@@ -12,8 +13,11 @@ const calculator = (a: number, b: number, operation: Operation) => {
 			return a * b
 			
 		case 'divide':
-			return b !== 0 ? a / b : 'cannot divide by zero'
-			
+			if(b === 0) throw new Error('Cannot divide by zero')
+			return a / b
+
+		default: 
+			throw new Error('Operation is not add, multiply or divide')
 	}
 }
 
