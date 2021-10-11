@@ -1,5 +1,8 @@
-const multiplicator = (a, b, someText) => {
-    return `${someText} ${a * b}`
+const multiplicator = (a: number, b: number, someText: string) => {
+   console.log(someText, a * b)
 }
 
-console.log(multiplicator(2, 4, 'the result of multiplying 2 by 4 is:'))
+const a: number = Number(process.argv[2])
+const b: number = Number(process.argv[3])
+
+multiplicator(a, b, `the result of multiplying ${a} by ${b} is:`)
