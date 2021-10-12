@@ -26,7 +26,7 @@ const multiplicator = (a: number, b: number, someText: string) => {
 
 try {
     const {value1, value2} = checkArguments(process.argv)
-    multiplicator(value1, value2, `the result of multiplying ${a} by ${b} is:`);
+    multiplicator(value1, value2, `the result of multiplying ${value1} by ${value2} is:`);
 } catch (e) {
     console.log('Something went wrong:', e.message);
 }
