@@ -30,3 +30,5 @@ const calculator = (a: number, b: number, operation: Operation) : Result => {
 }
 
 console.log(calculator(2, 4, 'divide'))
+
+export {calculator}
