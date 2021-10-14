@@ -14,18 +14,18 @@ const checkArguments = (args: Array<string>): MultiplyValues => {
         return {
             value1: Number(args[2]),
             value2: Number(args[3])
-        }
+        };
     } else {
         throw new Error('One or both of the arguments is not a number');
     }
-}
+};
 
 const multiplicator = (a: number, b: number, someText: string) => {
     console.log(someText, a * b);
-}
+};
 
 try {
-    const {value1, value2} = checkArguments(process.argv)
+    const {value1, value2} = checkArguments(process.argv);
     multiplicator(value1, value2, `the result of multiplying ${value1} by ${value2} is:`);
 } catch (error: any) {
     console.log('Something went wrong:', error.message);
